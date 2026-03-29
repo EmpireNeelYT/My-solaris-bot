@@ -3,123 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexGen | The Ultimate Discord Powerhouse</title>
+    <title>NexGen | The Monarch Economy & Automation Suite</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #020202; color: white; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 28px; transition: all 0.4s ease; }
-        .glass:hover { border-color: #5865F2; background: rgba(88, 101, 242, 0.07); transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #010101; color: white; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 30px; transition: all 0.5s ease; position: relative; overflow: hidden; }
+        .glass:hover { border-color: #5865F2; background: rgba(88, 101, 242, 0.05); transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
         .gradient-text { background: linear-gradient(135deg, #5865F2 0%, #ac7ff4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glow-btn { background: linear-gradient(135deg, #5865F2, #8547ff); transition: 0.3s; box-shadow: 0 0 20px rgba(88, 101, 242, 0.4); }
-        .glow-btn:hover { box-shadow: 0 0 35px rgba(88, 101, 242, 0.6); transform: scale(1.05); }
-        .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-        @media (max-width: 1024px) { .bento-grid { grid-template-columns: 1fr; } }
+        .glow-btn { background: linear-gradient(135deg, #5865F2, #8547ff); transition: 0.3s; box-shadow: 0 0 25px rgba(88, 101, 242, 0.4); }
+        .glow-btn:hover { box-shadow: 0 0 40px rgba(88, 101, 242, 0.7); transform: scale(1.05); }
+        .stat-badge { position: absolute; top: 1.5rem; right: 1.5rem; }
     </style>
 </head>
 <body class="overflow-x-hidden">
 
-    <div class="relative min-h-screen flex flex-col items-center justify-center text-center px-6">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[#5865F2] opacity-10 blur-[120px] rounded-full"></div>
-        
-        <nav class="absolute top-0 w-full max-w-7xl flex justify-between items-center p-8">
-            <div class="text-2xl font-800 tracking-tighter italic">NEX<span class="text-[#5865F2]">GEN</span></div>
-            <div class="hidden md:flex gap-8 text-sm font-semibold text-gray-400">
-                <a href="#features" class="hover:text-white transition">Features</a>
-                <a href="#commands" class="hover:text-white transition">Commands</a>
+    <nav class="fixed top-0 w-full z-50 bg-[#010101]/80 backdrop-blur-lg border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center p-6 px-8">
+            <div class="text-2xl font-800 tracking-tighter uppercase italic">NEX<span class="text-[#5865F2]">GEN</span></div>
+            <div class="flex gap-4 items-center">
+                <a href="https://discord.com/oauth2/authorize?client_id=1480487572777074729&permissions=8&integration_type=0&scope=bot" class="glow-btn px-6 py-2.5 rounded-full font-bold text-sm">Add Bot</a>
             </div>
-            <a href="https://discord.com/oauth2/authorize?client_id=1483926673777754235&permissions=8&integration_type=0&scope=bot" class="glow-btn px-6 py-2.5 rounded-full font-bold text-sm">Add Bot</a>
-        </nav>
-
-        <h1 class="text-6xl md:text-8xl font-800 tracking-tighter mb-6" data-aos="zoom-out">Master Your <br><span class="gradient-text">Community.</span></h1>
-        <p class="max-w-2xl text-gray-400 text-lg mb-10" data-aos="fade-up" data-aos-delay="200">The most advanced all-in-one Discord powerhouse. Leveling, Auto-Mod, AI, and Engagement tools—all under one roof.</p>
-        
-        <div class="flex gap-4" data-aos="fade-up" data-aos-delay="400">
-            <a href="#features" class="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl font-bold hover:bg-white/10 transition">Explore Features</a>
         </div>
-    </div>
+    </nav>
+
+    <header class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-32 relative">
+        <div class="absolute inset-0 w-full h-full bg-[#5865F2] opacity-10 blur-[150px] rounded-full"></div>
+        <span class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-semibold uppercase tracking-widest text-gray-500 mb-8 inline-block" data-aos="fade-down">Now trusted by 14+ Servers</span>
+        <h1 class="text-6xl md:text-8xl font-800 tracking-tighter mb-8" data-aos="zoom-out">A New <span class="gradient-text">Empire</span> <br>Awaits.</h1>
+        <p class="max-w-2xl text-gray-400 text-lg mb-12" data-aos="fade-up" data-aos-delay="200">Total control, advanced protection, and a revolutionary coin-based economy for your community.</p>
+        <div class="flex gap-4" data-aos="fade-up" data-aos-delay="400">
+            <a href="#economy" class="px-8 py-4 bg-[#5865F2] rounded-2xl font-bold hover:bg-[#4752c4] transition">Explore Economy</a>
+            <a href="#features" class="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl font-bold hover:bg-white/10 transition">Automation Modules</a>
+        </div>
+    </header>
 
     <section id="features" class="max-w-7xl mx-auto px-6 py-24">
-        <h2 class="text-4xl font-800 mb-16 text-center">Engineered for <span class="text-[#5865F2]">Growth.</span></h2>
+        <h2 class="text-4xl font-800 mb-20 text-center italic">The <span class="text-[#5865F2]">Titan</span> Modules</h2>
         
-        <div class="bento-grid">
-            <div class="glass p-10 md:col-span-2 flex flex-col justify-between h-[350px]" data-aos="fade-right">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass p-10 md:col-span-2 md:row-span-2 flex flex-col justify-between" data-aos="fade-right">
+                <div class="stat-badge w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center border border-blue-500/20"><i class="fa-solid fa-robot text-blue-400"></i></div>
                 <div>
-                    <i class="fa-solid fa-robot text-4xl text-blue-400 mb-6"></i>
-                    <h3 class="text-3xl font-bold mb-4">Elite AutoMod</h3>
-                    <p class="text-gray-400 max-w-md">Advanced AI-driven filters that stop spam, links, and toxic behavior before they reach your members. 24/7 silent protection.</p>
-                </div>
-                <div class="flex gap-2">
-                    <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-bold rounded-lg border border-blue-500/20">ANTI-SPAM</span>
-                    <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-bold rounded-lg border border-blue-500/20">LINK FILTER</span>
+                    <h3 class="text-4xl font-bold mb-4">Elite AutoMod</h3>
+                    <p class="text-gray-400 max-w-lg mb-6">AI-driven protection that learns. Stops spam, toxic links, and excessive caps before they bother your members.</p>
+                    <div class="space-x-2">
+                        <span class="px-3 py-1 bg-white/5 text-gray-500 text-xs font-bold rounded-md">ANTI-SPAM</span>
+                        <span class="px-3 py-1 bg-white/5 text-gray-500 text-xs font-bold rounded-md">BAD WORD FILTER</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="glass p-10 h-[350px]" data-aos="fade-left">
-                <i class="fa-solid fa-crown text-4xl text-yellow-500 mb-6"></i>
-                <h3 class="text-2xl font-bold mb-4">Leveling XP</h3>
-                <p class="text-gray-400">Engagement-based XP system with customizable rank cards and auto-role rewards.</p>
-            </div>
-
-            <div class="glass p-10" data-aos="fade-up">
-                <i class="fa-solid fa-door-open text-3xl text-green-400 mb-6"></i>
-                <h3 class="text-xl font-bold mb-2">Welcome & Auto-Role</h3>
-                <p class="text-gray-400 text-sm">Greet new members with beautiful embeds and assign roles instantly.</p>
+            <div class="glass p-10" data-aos="fade-left">
+                <i class="fa-solid fa-crown text-3xl text-yellow-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-2">Leveling XP</h3>
+                <p class="text-gray-400 text-sm">Reward active members with XP and rank cards. Customizable level-up roles.</p>
             </div>
 
             <div class="glass p-10" data-aos="fade-up" data-aos-delay="100">
-                <i class="fa-solid fa-square-poll-vertical text-3xl text-purple-400 mb-6"></i>
-                <h3 class="text-xl font-bold mb-2">Polls & Suggestions</h3>
-                <p class="text-gray-400 text-sm">Interactive voting systems and a dedicated suggestion board for your community.</p>
+                <i class="fa-solid fa-door-open text-3xl text-green-400 mb-6"></i>
+                <h3 class="text-xl font-bold mb-2">Welcome/Auto-Role</h3>
+                <p class="text-gray-400 text-sm">Automate your onboarding. Instant roles and embed greetings.</p>
             </div>
 
-            <div class="glass p-10" data-aos="fade-up" data-aos-delay="200">
-                <i class="fa-solid fa-shield-halved text-3xl text-red-500 mb-6"></i>
-                <h3 class="text-xl font-bold mb-2">Admin Panel</h3>
-                <p class="text-gray-400 text-sm">One-click moderation: Ban, Kick, Mute, and Clear with clean logging.</p>
+            <div class="glass p-10 col-span-3 grid md:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center gap-4 border-r border-white/5 pr-6"><i class="fa-solid fa-square-poll-vertical text-purple-400 text-2xl"></i><span class="text-sm font-semibold">POLLS</span></div>
+                <div class="flex items-center gap-4 border-r border-white/5 pr-6"><i class="fa-solid fa-code text-cyan-400 text-2xl"></i><span class="text-sm font-semibold">EMBED BUILDER</span></div>
+                <div class="flex items-center gap-4 border-r border-white/5 pr-6"><i class="fa-solid fa-lightbulb text-yellow-300 text-2xl"></i><span class="text-sm font-semibold">SUGGESTIONS</span></div>
+                <div class="flex items-center gap-4"><i class="fa-solid fa-shield-halved text-red-500 text-2xl"></i><span class="text-sm font-semibold">ADMIN PANEL</span></div>
             </div>
         </div>
     </section>
 
-    <section id="commands" class="max-w-4xl mx-auto px-6 py-24">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-800 italic">COMMAND <span class="text-[#5865F2]">INDEX</span></h2>
-        </div>
+    <section id="economy" class="max-w-7xl mx-auto px-6 py-24 pb-40">
+        <h2 class="text-4xl font-800 mb-20 text-center italic">The <span class="gradient-text">Empire Coins</span> System</h2>
         
-        <div class="space-y-4">
-            <div class="glass p-6 flex justify-between items-center group cursor-pointer hover:border-[#5865F2]">
-                <div>
-                    <code class="text-[#5865F2] text-lg font-bold">/embed create</code>
-                    <p class="text-gray-500 text-sm">Launch the interactive embed builder</p>
-                </div>
-                <i class="fa-solid fa-plus text-gray-700 group-hover:text-white transition"></i>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div class="glass p-10 col-span-1 md:sticky top-32 h-[450px] flex flex-col items-center justify-center text-center" data-aos="fade-up">
+                <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/coin-gold-512.png" alt="Empire Coin" class="w-32 mb-8 drop-shadow-[0_0_20px_rgba(255,215,0,0.4)]">
+                <h3 class="text-3xl font-bold mb-2">EMPIRE COINS</h3>
+                <p class="text-gray-400 text-sm mb-6">The official currency of your community.</p>
+                <div class="text-xl font-bold text-yellow-400 px-6 py-2 bg-yellow-400/10 rounded-full">Earn & Spend</div>
             </div>
 
-            <div class="glass p-6 flex justify-between items-center group cursor-pointer">
-                <div>
-                    <code class="text-[#5865F2] text-lg font-bold">/poll start</code>
-                    <p class="text-gray-500 text-sm">Create a multi-choice interactive poll</p>
+            <div class="glass p-10 col-span-2" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex justify-between items-center mb-10">
+                    <h4 class="text-2xl font-bold">Empire Jobs List</h4>
+                    <span class="text-gray-500 text-xs italic">Use /job apply [jobname]</span>
                 </div>
-                <i class="fa-solid fa-plus text-gray-700 group-hover:text-white"></i>
-            </div>
+                
+                <div class="space-y-4">
+                    <div class="glass p-6 bg-white/0 flex justify-between items-center rounded-2xl hover:bg-white/5 transition">
+                        <div>
+                            <span class="text-sm text-gray-500 font-bold uppercase">Beginner</span>
+                            <p class="text-white font-bold text-lg">Server Chat Worker</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs text-green-400 font-semibold">+150 EC/Hr</span>
+                            <p class="text-xs text-gray-600">REQ: Level 5</p>
+                        </div>
+                    </div>
 
-            <div class="glass p-6 flex justify-between items-center group cursor-pointer">
-                <div>
-                    <code class="text-[#5865F2] text-lg font-bold">/suggest</code>
-                    <p class="text-gray-500 text-sm">Submit a new idea to the staff board</p>
+                    <div class="glass p-6 bg-white/0 flex justify-between items-center rounded-2xl hover:bg-white/5 transition border-l-4 border-l-[#5865F2]">
+                        <div>
+                            <span class="text-sm text-[#5865F2] font-bold uppercase">Advanced</span>
+                            <p class="text-white font-bold text-lg">AI Content Mod</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs text-green-400 font-semibold">+500 EC/Hr</span>
+                            <p class="text-xs text-gray-600">REQ: Level 25</p>
+                        </div>
+                    </div>
+
+                    <div class="glass p-6 bg-white/0 flex justify-between items-center rounded-2xl hover:bg-white/5 transition">
+                        <div>
+                            <span class="text-sm text-gray-500 font-bold uppercase">Elite</span>
+                            <p class="text-white font-bold text-lg">Empire Guild Leader</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs text-green-400 font-semibold">+1200 EC/Hr</span>
+                            <p class="text-xs text-gray-600">REQ: Level 50+</p>
+                        </div>
+                    </div>
                 </div>
-                <i class="fa-solid fa-plus text-gray-700 group-hover:text-white"></i>
             </div>
         </div>
     </section>
 
     <footer class="py-20 text-center border-t border-white/5">
-        <p class="text-gray-600 text-sm italic mb-4">NEXGEN &copy; 2026. Elevating Discord one server at a time.</p>
-        <div class="flex justify-center gap-8">
-            <a href="#" class="text-gray-500 hover:text-white transition text-xl"><i class="fa-brands fa-discord"></i></a>
-            <a href="#" class="text-gray-500 hover:text-white transition text-xl"><i class="fa-brands fa-github"></i></a>
+        <p class="text-gray-600 text-sm italic mb-4">NEXGEN Guardians &copy; 2026. Powering the new internet.</p>
+        <div class="flex justify-center gap-8 text-gray-500">
+            <a href="#" class="hover:text-white transition text-xl"><i class="fa-brands fa-discord"></i></a>
+            <a href="#" class="hover:text-white transition text-xl"><i class="fa-brands fa-github"></i></a>
         </div>
     </footer>
 
